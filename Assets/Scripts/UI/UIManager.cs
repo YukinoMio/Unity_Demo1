@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class UIManager
 {
-    private UIManager instance=new UIManager();
-    public static UIManager Instance => Instance;
+    private static UIManager instance=new UIManager();
+    public static UIManager Instance => instance;
     //用于存储显示着的面板 每显示一个面板 就会存入这个字典
     //隐藏面板时 直接获取字典中的对应面板 进行隐藏
     private Dictionary<string ,BasePanel> panelDic=new Dictionary<string ,BasePanel>();
@@ -32,7 +32,7 @@ public class UIManager
             return panelDic[panelName] as T;    
         }
         //显示面板 根据面板名字 动态地创建预设体 设置父对象 
-        GameObject panelObj=GameObject.Instantiate(Resources.Load<GameObject>("UI"+panelName));
+        GameObject panelObj=GameObject.Instantiate(Resources.Load<GameObject>("UI/"+panelName));
         //把这个对象放到 场景中地 Canvas下面
         panelObj.transform.SetParent(canvasTrans, false);
         //得到挂载地面板脚本

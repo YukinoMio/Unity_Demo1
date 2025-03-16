@@ -51,7 +51,7 @@ public abstract class BasePanel : MonoBehaviour//抽象类不能new出来 只能继承使用
         hideCallBack = callBack;
     }
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         //当处于显示状态时 如果透明度不为1 就会不停的加到1  加到1 过后 就停止变化了
         //淡入
