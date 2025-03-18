@@ -1,0 +1,9 @@
+[
+    {"id":1,"res":"Role/1","atk":1,"hp":110,"tips":"武器：刀","lockMoney":0,"type":1,"hitEff":"eff/1"},
+    {"id":2,"res":"Role/2","atk":2,"hp":100,"tips":"武器：手枪","lockMoney":0,"type":2,"hitEff":"eff/2"},
+    {"id":3,"res":"Role/3","atk":3,"hp":100,"tips":"武器：狙击枪","lockMoney":200,"type":2,"hitEff":"eff/1"},
+    {"id":4,"res":"Role/4","atk":4,"hp":100,"tips":"武器：步枪","lockMoney":300,"type":2,"hitEff":"eff/2"},
+    {"id":5,"res":"Role/5","atk":4,"hp":100,"tips":"武器：机关枪","lockMoney":400,"type":2,"hitEff":"eff/3"},
+    {"id":6,"res":"Role/6","atk":8,"hp":100,"tips":"武器：火箭筒","lockMoney":500,"type":2,"hitEff":"eff/4"}
+    
+    ]
