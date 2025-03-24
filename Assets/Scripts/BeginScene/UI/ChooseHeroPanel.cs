@@ -112,14 +112,11 @@ public class ChooseHeroPanel : BasePanel
         //取出数据的一条 根据索引值
         nowRoleData = GameDataMgr.Instance.roleInfoList[nowIndex];
 
-        //GameObject prefab = Resources.Load<GameObject>(nowRoleData.res);
-        //if (prefab == null)
-        //{
-        //    Debug.LogError($"加载资源失败: {nowRoleData.res}");
-        //    return;
-        //}
         //实例化对象并记录下来
         heroObj =Instantiate(Resources.Load<GameObject>(nowRoleData.res), heroPos.position, heroPos.rotation);
+
+        //由于我们现在在对象上挂载了PlayerObject 但是在开始场景不需要
+        Destroy(heroObj.GetComponent<PlayerObject>());
         //更新上方显示的 描述信息
         txtName.text = nowRoleData.tips;
         //根据解锁相关数据 来决定是否显示解锁按钮
